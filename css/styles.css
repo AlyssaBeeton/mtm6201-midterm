@@ -219,21 +219,53 @@ table {
 
 /* Hamburger menu by Mark Caron @ https://heyoka.medium.com/responsive-pure-css-off-canvas-hamburger-menu-aebc8d11d793 */
 
-/* .welcomeimg {
+.welcomeimg {
 	width: 100%;
-	z-index:1;
-}
-*/
-
-.welcome {
-	width: 100%;
-	background-image: url(images/pexels-pixabay-356036.jpg);
-	z-index: 1;
+	position: static;
 }
 
+/* should be appearing behind text but isnt?? */
 .blackbox {
-	background-color: #000;
-	opacity: 50%;
+	width: 80%;
+	height: 70%;
+	margin: 0 auto;
+}
+
+h1 {
+	font-family: 'tilt warp';
+	color: white;
+	text-align: center;
+	font-size: 3rem;
+	margin-top: 8%;
+	animation-duration: 2s;
+	animation-name: bounceIn;
+	  
+}
+
+@keyframes bounceIn {
+	0% {
+	  transform: scale(0.1);
+	  opacity: 0;
+	}
+	60% {
+	  transform: scale(1.2);
+	  opacity: 1;
+	}
+	100% {
+	  transform: scale(1);
+	}
+}
+
+.bannerp {
+	color: white;
+}
+
+.bannertxt {
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: column;
 }
 
 .teamphoto {
@@ -322,6 +354,8 @@ footer {
 	display: flex;
     justify-content: center;
 	margin-bottom: 10%;
+	margin-left: 38%;
+	width: 25%;
   }
   
 .servicesbutton:hover, .servicesbutton:active {
@@ -401,6 +435,11 @@ input {
 	padding-left: 35px;
 	padding-right: 35px;
 	font-family: Arial;
+	border-radius: 10%;
+}
+
+.welcomebutton:hover, .welcomebutton:active {
+	background-color: #fcc062;
 }
 
 .projects {
@@ -409,9 +448,12 @@ input {
 }
 
 .certificationsbox {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns:repeat(2, 1fr);
+	grid-template-rows:repeat(2, 1fr);
 }
+
+/* tried multiple variations of grid and flex and this is the best i can do */
 
 .arrowbutton {
 	background-color: #fcc062;
@@ -423,3 +465,6 @@ input {
 	width: 55px;
 	height: 55px;
 }
+
+/* END OF MOBILE STYLES */
+
