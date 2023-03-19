@@ -328,6 +328,7 @@ footer {
 	margin-bottom: 0;
 }
 
+/* this is meant to be a sliding bar */
 .product1 {
 	border-radius: 50%;
 	width: 40%;
@@ -341,6 +342,14 @@ footer {
 	width: 40%;
 	height: 40%;
 	margin-bottom: 10%;
+}
+
+.product3 {
+	display: none;
+}
+
+.product4 {
+	display: none;
 }
 
 .servicesbutton:link, .servicesbutton:visited {
@@ -469,5 +478,53 @@ input {
 /* END OF MOBILE STYLES */
 
 @media screen and (min-width: 900px) {
+
+h1 {
+	font-size: 7rem;
+}
+
+.mvacontainer {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+  	align-items: center;
+	flex-direction: row;
+}
+
+/* targeting div doesn't work */
+
+.productsimgs {
+	margin: 0 auto;
+}
+
+.product1 {
+	width: 20%;
+	height: 20%;
+	margin-right: 2%;
+}
+
+.product2 {
+	width: 20%;
+	height: 20%;
+	margin-right: 2%;
+}
+
+.product3 {
+	display:inline;
+	border-radius: 50%;
+	width: 20%;
+	height: 20%;
+	margin-bottom: 10%;
+	margin-right: 2%;
+}
+
+.product4 {
+	display:inline;
+	border-radius: 50%;
+	width: 20%;
+	height: 20%;
+	margin-bottom: 10%;
+}
+/* in hindsight this should be a grid */
 
 }
